@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
   $soluong = $_POST['soluong'];
   $iddanhmuc = $_POST['iddanhmuc'];
 
-  $conn =	mysqli_connect("localhost", "root", "", "dacs2");
+  $conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
   $sql= "UPDATE sanpham SET tensp='$tensp',giasp=$giasp, mota='$mota',hinhanh='$hinhanh',soluong=$soluong,size=$size,mau='$mau',iddanhmuc=$iddanhmuc WHERE id=".$_GET['id'] ;
   $ketqua = mysqli_query($conn, $sql);
   }}
@@ -135,7 +135,7 @@ if (isset($_POST['submit'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -199,7 +199,7 @@ if (isset($_POST['submit'])) {
  
                 
  <?php
-       $conn2 = mysqli_connect("localhost", "root", "", "dacs2");
+       $conn2 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
        $sql2 = "SELECT * FROM sanpham where id=".$_GET['id'];
        $ketqua = mysqli_query($conn2, $sql2);
        $row = mysqli_fetch_array($ketqua);
@@ -248,7 +248,7 @@ if (isset($_POST['submit'])) {
    <td>
  <select name="iddanhmuc">
            <?php 
-               $conn2 =	mysqli_connect("localhost", "root", "", "dacs2");
+               $conn2 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
                $sql2= "SELECT * FROM danhmuc";
                $ketqua2 = mysqli_query($conn2, $sql2);
                while($row2 = mysqli_fetch_array($ketqua2))

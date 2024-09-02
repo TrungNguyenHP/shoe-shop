@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$connect = mysqli_connect("localhost","root","","dacs2") or die('Not connect');
+$connect = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2") or die('Not connect');
 date_default_timezone_set("Asia/Bangkok"); // Thiết lập múi giờ chuẩn
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (isset($_POST['submit'])) {
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
   $soluong = $_POST['soluong'];
   $iddanhmuc = $_POST['iddanhmuc'];
 
-  $conn =	mysqli_connect("localhost", "root", "", "dacs2");
+  $conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
   $sql= "INSERT INTO sanpham (tensp, giasp, mota,hinhanh,soluong,iddanhmuc) VALUES ('$tensp',  $giasp, '$mota','$hinhanh',$soluong,$iddanhmuc)";
   $ketqua = mysqli_query($conn, $sql);
   }}
@@ -137,7 +137,7 @@ if (isset($_POST['submit'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -227,7 +227,7 @@ if (isset($_POST['submit'])) {
     <td>
   <select name="iddanhmuc">
 			<?php 
-				$conn2 =	mysqli_connect("localhost", "root", "", "dacs2");
+				$conn2 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 				$sql2= "SELECT * FROM danhmuc";
 				$ketqua2 = mysqli_query($conn2, $sql2);
 				while($row2 = mysqli_fetch_array($ketqua2))
