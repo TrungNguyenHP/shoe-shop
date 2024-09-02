@@ -9,7 +9,7 @@ session_start();
 </head>
 <body>
 	<!-- Nhúng file JavaScript -->
-<script language="javascript" src="kiemtra.js"></script>
+<!-- <script language="javascript" src="kiemtra.js"></script> -->
 <form action="" method="POST" onsubmit="return validate()">
 <div class="register">
 <h1>Đăng nhập</h1>
