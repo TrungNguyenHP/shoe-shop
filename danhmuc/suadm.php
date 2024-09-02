@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$tendanhmuc = $_POST['tendanhmuc'];
 
 
-	$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+	$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 	$sql = "UPDATE danhmuc SET tendanhmuc='$tendanhmuc' WHERE id=".$_GET['id'];
 	$ketqua = mysqli_query($conn, $sql);
 	mysqli_close($conn);
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<div class="product-detail-describe__detail">  
                     <h1>Sửa danh mục</h1>
 	<?php
-		$conn2 = mysqli_connect("localhost", "root", "", "dacs2");
+		$conn2 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 		$sql2 = "SELECT * FROM danhmuc where id=".$_GET['id'];
 		$ketqua = mysqli_query($conn2, $sql2);
 		$thongtinsv = mysqli_fetch_array($ketqua);

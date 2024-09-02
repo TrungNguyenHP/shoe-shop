@@ -100,7 +100,7 @@ session_start();
 						<ul class="navbar-category-list">
 						<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn3 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -115,7 +115,7 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn3 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -201,7 +201,7 @@ session_start();
 							<ul class="category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn3 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -216,7 +216,7 @@ session_start();
 							<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn3 = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn3 = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql3 = "SELECT * From danhmuc";
 										$ketqua3 = mysqli_query($conn3,$sql3);
 										while($row3=mysqli_fetch_array($ketqua3)){
@@ -271,7 +271,7 @@ session_start();
                         if(isset($_POST['s']))
                         {
                             $s= $_POST['s'];
-							$conn = mysqli_connect("localhost", "root", "", "dacs2");
+							$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 							$sql = "SELECT * From sanpham WHERE tensp LIKE '%$s%'";
 							$ketqua = mysqli_query($conn,$sql);
                            

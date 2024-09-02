@@ -4,7 +4,7 @@ session_start();
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$tendanhmuc = $_POST['tendanhmuc'];
 
-			$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+			$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 			$sql= "INSERT INTO danhmuc (tendanhmuc) VALUES ('$tendanhmuc')";
 			$ketqua = mysqli_query($conn, $sql);
 			header("location: ../danhmuc/quanlydm.php");
@@ -112,7 +112,7 @@ session_start();
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){

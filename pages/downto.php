@@ -99,7 +99,7 @@ session_start();
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -181,7 +181,7 @@ session_start();
 							<ul class="category-list">
 								<li class="category-item category-item--active">
 								<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -231,7 +231,7 @@ session_start();
 						
                   
 		<?php
-			$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+			$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 			$sql= "SELECT * FROM sanpham ORDER BY giasp DESC";
 			$ketqua = mysqli_query($conn, $sql);
 

@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
     
     echo $noidung.'-'.$username.'-'.$idsp;
 
-    $conn = mysqli_connect("localhost", "root", "", "dacs2");
+    $conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
     $sql = "INSERT INTO binhluan( noidung, username, idsp) VALUES ('$noidung','$username',$idsp)";
     $ketqua = mysqli_query($conn, $sql);
     echo $sql;

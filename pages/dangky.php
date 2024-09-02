@@ -25,7 +25,7 @@
 				   echo "bạn vui lòng nhập đầy đủ thông tin";
   			}else{
   					// Kiểm tra tài khoản đã tồn tại chưa
-					$conn = mysqli_connect("localhost", "root", "", "dacs2");
+					$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
   					$sql="SELECT * from taikhoan where username='$username'";
 					$kt=mysqli_query($conn, $sql);
 

@@ -25,7 +25,7 @@ session_start();
 		if ($username == "" || $password =="") {
 			echo "<p>username hoặc password bạn không được để trống!</p>";
 		}else{
-            $conn = mysqli_connect("localhost", "root", "", "dacs2");
+            $conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 			$sql = "SELECT * from taikhoan where username = '$username' AND password = '$password' ";
 			$query = mysqli_query($conn,$sql);
 			$row = mysqli_fetch_array($query);

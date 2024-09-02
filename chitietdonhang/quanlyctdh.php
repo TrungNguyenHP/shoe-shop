@@ -105,7 +105,7 @@ if (!isset($_SESSION['username'])) {
 						<ul class="navbar-category-list">
 							<li class="navbar-category-item">
 							<?php
-										$conn = mysqli_connect("localhost", "root", "", "dacs2");
+										$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 										$sql = "SELECT * From danhmuc";
 										$ketqua = mysqli_query($conn,$sql);
 										while($row=mysqli_fetch_array($ketqua)){
@@ -207,7 +207,7 @@ if (!isset($_SESSION['username'])) {
 <tbody>
 <?php
 	
-	$conn =	mysqli_connect("localhost", "root", "", "dacs2");
+	$conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
 	$sql= "SELECT * FROM chitietdonhang ";
 	$ketqua = mysqli_query($conn, $sql);
 	$stt = 1;
