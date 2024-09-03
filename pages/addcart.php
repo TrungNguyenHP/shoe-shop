@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-        $conn = mysqli_connect("localhost", "root", "", "dacs2");
+        $conn = mysqli_connect("coffee-shop.mysql.database.azure.com", "tuan", "Tohru14617", "dacs2");
         $sql ="select * from sanpham ";
         $query=mysqli_query($conn,$sql);
         $id=$_GET['item'];
