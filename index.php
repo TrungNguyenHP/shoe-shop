@@ -37,7 +37,7 @@ if (!isset($_SESSION['username'])) {
 					
 					</div>
 					<div class="contact">
-						<p>Hotline: 0123456789</p>
+						<p>Hotline: 0916070437</p>
 						<p>Email: <a href="mailto:TT Shoesshop@gmail.com" style="color: #333;">TT Shoesshop@gmail.com</a></p>
 					</div>
 				</div>
